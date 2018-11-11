@@ -23,7 +23,7 @@ public class Customer {
         
     }
     public Customer (String nama, String nik, String noRek, String alamat, String pendidikan, String noHp, String tglLahir, String wali){
-        
+        System.out.println("hello");
     }
     public Customer (String nama, String nik, String noRek, String prioritas, String alamat, String pendidikan, String noHp,String tglLahir, String wali){
         
