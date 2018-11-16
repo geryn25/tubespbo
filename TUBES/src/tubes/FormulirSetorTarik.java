@@ -9,25 +9,22 @@ package tubes;
  *
  * @author YAHYA
  */
-public class FormulirSetorTarik {
+public class FormulirSetorTarik extends Formulir{
     private boolean isWithdraw;
     private double jumlahSetorTarik;
     private String berita;
     
-    public FormulirSetorTarik(Customer c, boolean isWithdraw, double jumlah, String berita){
-        
+    public FormulirSetorTarik(Customer c,String id, boolean isWithdraw, double jumlah, String berita){
+        super(c,id);
+        this.berita=berita;
+        this.isWithdraw=isWithdraw;
+        this.jumlahSetorTarik=jumlah;
     }
     public double getJumlahSetorTarik(){
         return jumlahSetorTarik;
     }
     public void setJumlahSetorTarik(double jumlah){
         this.jumlahSetorTarik=jumlah;
-    }
-    public String getNama(Formulir f){
-        return f.getNamaFormulir();
-    }
-    public String getNik(Formulir f){
-        return f.getNikFormulir();
     }
     public boolean getTarikSetor(){
         return isWithdraw;

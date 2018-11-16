@@ -9,13 +9,16 @@ package tubes;
  *
  * @author YAHYA
  */
-public class FormulirGantiKartu {
+public class FormulirGantiKartu extends Formulir {
     private String jenisAwal;
     private String jenisGanti;
     private String noKartu;
     
-    public FormulirGantiKartu( Customer c, String jenisAwal, String jenisGanti, String noKartu ){
-        
+    public FormulirGantiKartu( Customer c,String id, String jenisAwal, String jenisGanti, String noKartu ){
+        super(c,id);
+        this.jenisAwal=jenisAwal;
+        this.jenisGanti=jenisGanti;
+        this.noKartu=noKartu;
     }
     public String getJenisAwal(){
         return jenisAwal;
@@ -26,7 +29,7 @@ public class FormulirGantiKartu {
     public String getJenisGanti(){
         return jenisGanti;
     }
-    public void setJenisGanti(String jeniGanti){
+    public void setJenisGanti(String jenisGanti){
         this.jenisGanti=jenisGanti;
     }
     public String getNoKartu(){
@@ -35,11 +38,5 @@ public class FormulirGantiKartu {
     public void setNoKartu(String noKartu){
         this.noKartu=noKartu;
     }
-     public String getNama(Formulir f){
-        return f.getNamaFormulir();
-    }
-    public String getNik(Formulir f){
-        return f.getNikFormulir();
-    }
-    
+ 
 }

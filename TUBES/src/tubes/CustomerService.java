@@ -9,6 +9,18 @@ package tubes;
  *
  * @author YAHYA
  */
-public class CustomerService {
+public class CustomerService extends Petugas {
     private String passwordCS;
+
+    public CustomerService(String nama, String id, String alamat, int lama, String tglLahir,String password) {
+        super(nama,id, alamat, lama, tglLahir);
+        this.passwordCS=password;
+    }
+    public String getPassword() {
+        return passwordCS;
+    }
+    public void setPassword(String pass) {
+        this.passwordCS=pass;
+    }
+    
 }

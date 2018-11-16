@@ -7,24 +7,39 @@ package tubes;
 
 /**
  *
- * @author YAHYA
+ * @author geryn
  */
 public class Prioritas {
-   public String jenisPrioritas;
-   public String kodePrioritas;
-   public Prioritas (String jPrio, String kPrio){
-    
-   }
-   public String getJenisPrioritas(){
-       return jenisPrioritas;
-   }
-   public void setJenisPrioritas(String jenisPrioritas){
-       this.jenisPrioritas=jenisPrioritas;
-   }
-   public String getKodePrioritas(){
-       return kodePrioritas;
-   }
-   public void setKodePrioritas(String kodePrioritas){
-       this.kodePrioritas=kodePrioritas;
-   }
+    private String jenisPrioritas;
+    private String kodePrioritas;
+    public String getKprioritas(){
+        return kodePrioritas;
+    }
+    public String getJprioritas() {
+        return jenisPrioritas;
+    }
+    public void setJprioritas(){
+        if (getKprioritas().charAt(0)=='1'){
+            this.jenisPrioritas="VIP";
+        }
+        else if (getKprioritas().charAt(0)=='2'){
+            this.jenisPrioritas="VVIP";
+        }
+        else if (getKprioritas().charAt(0)=='3'){
+            this.jenisPrioritas="SVVIP";
+        }
+    }
+    public void setKprioritas(String kode) {
+        if (kode.charAt(0)=='1') {
+            this.kodePrioritas=kode;
+        }
+        else if (kode.charAt(0)=='2') {
+            this.kodePrioritas=kode;
+        }
+        else if (kode.charAt(0)=='3') {
+            this.kodePrioritas=kode;
+        } else {
+            System.out.println("INPUTAN kode tidak Benar");
+        }
+    }
 }

@@ -9,7 +9,7 @@ package tubes;
  *
  * @author YAHYA
  */
-public class Customer {
+public final class Customer extends Prioritas {
     private String nama;
     private String nik;
     private String noRek;
@@ -19,14 +19,37 @@ public class Customer {
     private String tglLahir;
     private String wali;
     
-    public Customer (String nama, String alamat, String pendidikan, String noHp, String tglLahir, String wali){
+    public Customer (String nama,String NIK, String alamat, String pendidikan, String noHp, String tglLahir, String wali){
+        setNama(nama);
+        setNIK(NIK);
+        setAlamat(alamat);
+        setPendidikan(pendidikan);
+        setNoHP(noHp);
+        setTglLahir(tglLahir);
+        setWali(wali);
         
     }
     public Customer (String nama, String nik, String noRek, String alamat, String pendidikan, String noHp, String tglLahir, String wali){
-        System.out.println("hello");
+        setNama(nama);
+        setNIK(nik);
+        setAlamat(alamat);
+        setPendidikan(pendidikan);
+        setNoHP(noHp);
+        setTglLahir(tglLahir);
+        setWali(wali);
+        setNoRek(noRek);
     }
     public Customer (String nama, String nik, String noRek, String prioritas, String alamat, String pendidikan, String noHp,String tglLahir, String wali){
-        
+        setNama(nama);
+        setNIK(nik);
+        setAlamat(alamat);
+        setPendidikan(pendidikan);
+        setNoHP(noHp);
+        setTglLahir(tglLahir);
+        setWali(wali);
+        setNoRek(noRek);
+        super.setKprioritas(prioritas);
+        super.setJprioritas();;
     }
     public String getNama(){
         return nama;
@@ -40,13 +63,6 @@ public class Customer {
     public void setNik(String nik){
         this.nik=nik;
         
-    }
-    public String getPrioritas(){
-        
-        
-    }
-    public void setPrioritas(){
-        .
     }
     public String getAlamat(){
         return alamat;
@@ -66,5 +82,23 @@ public class Customer {
     public String getWali(){
         return wali;
     }
-    
+    public void setPendidikan(String pendidikan) {
+        this.pendidikan=pendidikan;
+    }
+    public void setNoHP(String nohp) {
+        this.noHp=nohp;
+    }
+    public void setTglLahir(String tgl) {
+        this.tglLahir=tgl;
+    }
+    public void setWali(String wali) {
+        this.wali=wali;
+    }
+    public void setNoRek(String norek) {
+        this.noRek=norek;
+    }
+    public void setNIK(String nik) {
+        this.nik=nik;
+    }
+
 }

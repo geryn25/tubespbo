@@ -9,40 +9,18 @@ package tubes;
  *
  * @author YAHYA
  */
-public class Teller {
+public class Teller extends Petugas {
     private String passwordTeller;
     
-    public Teller(String id, String nama, String alamat, String lama, String tgl, String password){
+    public Teller(String id, String nama, String alamat, int lama, String tgl, String password){
+        super(nama,id,alamat,lama,tgl);
+        this.passwordTeller=password;
         
     }
-    public String getId(Petugas p){
-        return p.getIdPetugas();
+    public String getPassword() {
+        return passwordTeller;
     }
-    public void setId(Petugas p,String id){
-        p.setIdPetugas(id);
-    }
-    public String getNama(Petugas p){
-        return p.getNamaPetugas();
-    }
-    public void setNama(Petugas p,String nama){
-        p.setNamaPetugas(nama);
-    }
-    public String getAlamat(Petugas p){
-        return p.getAlamatPetugas();
-    }
-    public void setAlamat(Petugas p,String alamat){
-        p.setAlamatPetugas(alamat);
-    }
-    public int lamaBekerja(Petugas p){
-        return p.getLamaBekerja();
-    }
-    public void setLamaBekerja(Petugas p,int lama){
-        p.setLamaBekerja(lama);
-    }
-    public String getTanggalLahir(Petugas p){
-        return p.getTglLahirPetugas();
-    }
-    public void setTglLahir(Petugas p, String tgl){
-        p.setTglLahirPetugas(tgl);
+    public void setPassword(String pass) {
+        this.passwordTeller=pass;
     }
 }

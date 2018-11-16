@@ -9,15 +9,18 @@ package tubes;
  *
  * @author YAHYA
  */
-public class Petugas {
+public abstract class Petugas {
   private  String idPetugas;
   private String namaPetugas;
   private String alamatPetugas;
   private int lamaBekerja;
   private String tglLahirPetugas;
-  public Petugas(String nama, String id){
+  public Petugas(String nama, String id,String alamat,int lama,String tglLahir){
       this.namaPetugas=nama;
       this.idPetugas=id;
+      this.lamaBekerja=lama;
+      this.tglLahirPetugas=tglLahir;
+      this.alamatPetugas=alamat;
   }
   public String getNamaPetugas(){
       return namaPetugas;

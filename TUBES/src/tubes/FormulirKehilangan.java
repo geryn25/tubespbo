@@ -9,13 +9,16 @@ package tubes;
  *
  * @author YAHYA
  */
-public class FormulirKehilangan {
+public class FormulirKehilangan extends Formulir {
     private String sebabKehilangan;
     private String tanggalKehilangan;
     private String jamKehilangan;
     
-    public FormulirKehilangan( Customer c, String sebebKehilangan, String jamKehilangan, String tanggalKehilangan){
-        
+    public FormulirKehilangan( Customer c,String id, String sebabKehilangan, String jamKehilangan, String tanggalKehilangan){
+        super(c,id);
+        this.jamKehilangan=jamKehilangan;
+        this.sebabKehilangan=sebabKehilangan;
+        this.tanggalKehilangan=tanggalKehilangan;
     }
     public String getSebabKehilangan(){
         return sebabKehilangan;
@@ -34,11 +37,5 @@ public class FormulirKehilangan {
     }
     public void setJamKehilangan(String jamKehilangan){
         this.jamKehilangan=jamKehilangan;
-    }
-     public String getNama(Formulir f){
-        return f.getNamaFormulir();
-    }
-    public String getNik(Formulir f){
-        return f.getNikFormulir();
     }
 }

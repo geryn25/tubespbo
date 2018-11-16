@@ -9,20 +9,16 @@ package tubes;
  *
  * @author YAHYA
  */
-public class FormulirTransfer {
+public class FormulirTransfer extends Formulir {
     private double jumlahTransfer;
     private String rekTujuan;
     private String bankTujuan;
     
-    public FormulirTransfer(Customer c, double jumlah, String rekTujuan, String bankTujuan){
-        
-    }
-    public String getNama(Formulir f){
-        return f.getNamaFormulir();
-    }
-    public String getNik(Formulir f){
-        return f.getNikFormulir();
-        
+    public FormulirTransfer(Customer c,String id, double jumlah, String rekTujuan, String bankTujuan){
+        super(c,id);
+        this.bankTujuan=bankTujuan;
+        this.jumlahTransfer=jumlah;
+        this.rekTujuan=rekTujuan;
     }
     public double getJumlahTransfer(){
         return jumlahTransfer;

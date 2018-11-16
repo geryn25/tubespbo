@@ -9,12 +9,14 @@ package tubes;
  *
  * @author YAHYA
  */
-public class FormulirBukaRekening {
+public class FormulirBukaRekening extends Formulir {
     private String jenisRekening;
     private double setoranAwal;
     
-    public FormulirBukaRekening(Customer c, String jenisRekening, double setoranAwal){
-        
+    public FormulirBukaRekening(Customer c,String id, String jenisRekening, double setoranAwal){
+        super(c,id);
+        this.jenisRekening=jenisRekening;
+        this.setoranAwal=setoranAwal;
     }
     public String getJenisRekening(){
         return jenisRekening;
@@ -28,11 +30,5 @@ public class FormulirBukaRekening {
     }
     public void setSetoranAwal(double setoranAwal){
         this.setoranAwal=setoranAwal;
-    }
-     public String getNama(Formulir f){
-        return f.getNamaFormulir();
-    }
-    public String getNik(Formulir f){
-        return f.getNikFormulir();
     }
 }

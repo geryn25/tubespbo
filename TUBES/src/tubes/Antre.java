@@ -9,13 +9,17 @@ package tubes;
  *
  * @author YAHYA
  */
+import java.util.*;
 public class Antre {
     private String jenisAntre;
     private String tanggalAntre;
     private String noAntre;
+    private List<String> List;
     private int jumlahAntre;
-    public Antre(String jenisAntre, String tglAntre, String noAntre){
-        
+    public Antre(String jenisAntre, String tglAntre){
+        this.jenisAntre=jenisAntre;
+        this.tanggalAntre=tglAntre;
+        List=new ArrayList();
     }
     public void addAntre(){
         
