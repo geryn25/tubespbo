@@ -13,19 +13,34 @@ import java.util.*;
 public class Antre {
     private String jenisAntre;
     private String tanggalAntre;
-    private String noAntre;
+    private int noAntre=1;
     private List<String> List;
     private int jumlahAntre;
     public Antre(String jenisAntre, String tglAntre){
-        this.jenisAntre=jenisAntre;
+        if (jenisAntre=="Teller" || jenisAntre=="Customer Sevice") {
+            this.jenisAntre=jenisAntre;
+        } else {
+            this.jenisAntre="Customer Service";
+        }
+        
         this.tanggalAntre=tglAntre;
         List=new ArrayList();
     }
     public void addAntre(){
-        
+        if (jenisAntre=="Teller") {
+            List.add("T"+noAntre);
+            noAntre++;
+            jumlahAntre++;
+        }
+        if(jenisAntre=="Customer Service") {
+            List.add("CS"+noAntre);
+            noAntre++;
+            jumlahAntre++;
+        }
     }
     public void delAntre(){
-        
+        List.remove(0);
+        jumlahAntre--;
     }
     public void setJumlahAntre(int jum){
         this.jumlahAntre=jum;
@@ -42,14 +57,18 @@ public class Antre {
     public String getTanggalAntre(){
         return tanggalAntre;
     }
-    public String getNoAntre(){
-        return noAntre;
+    public String getNoAntre(int o){
+        return List.get(o);
     }
     public void setTanggalAntre(String tgl){
         this.tanggalAntre=tgl;
     }
-    public void setNoAntre(String nomor){
-        this.noAntre=nomor;
+    public void setNoAntre(int index,int nomor){
+        if(jenisAntre=="teller") {
+            List.set(index, "T"+nomor);
+        } else if (jenisAntre=="Customer Service") {
+            List.set(index, "CS"+nomor);
+        }
     }
     
 }
